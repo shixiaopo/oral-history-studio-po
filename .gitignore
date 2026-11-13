@@ -1,0 +1,19 @@
+# macOS
+.DS_Store
+._*
+
+# Python
+__pycache__/
+*.pyc
+
+# 本地私密配置（绝不入库）
+.ohrc.json
+*.key
+.env
+
+# 工作产物（口述历史项目数据只留本地）
+work/
+output/
+*.mp3
+*.m4a
+*.wav
