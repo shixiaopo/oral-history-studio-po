@@ -1,6 +1,6 @@
 ---
 name: oral-history-studio
-version: 2.5.0
+version: 2.5.1
 display_name: 人生之书·口述历史工作室
 display_name_en: Life Book · Oral History Studio
 description: 口述历史工作室——为家人记录人生故事的完整链路 Skill。用户要做家人/长辈的口述历史采访或代访（"人生之书"类需求）时使用：AI
