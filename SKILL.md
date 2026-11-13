@@ -1,6 +1,6 @@
 ---
 name: oral-history-studio
-version: 2.2.0
+version: 2.3.0
 display_name: 人生之书·口述历史工作室
 display_name_en: Life Book · Oral History Studio
 description: 口述历史工作室——为家人记录人生故事的完整链路 Skill。用户要做家人/长辈的口述历史采访或代访（"人生之书"类需求）时使用：AI
@@ -26,7 +26,7 @@ disable-model-invocation: false
 
 链路一次次往前推进，最终汇成书。
 
-**双端架构说明**：本 skill 是"加工端"（整理、台账、成书）。包内 assets/doubao-collector.md 是配套的豆包采集端提示词——长辈在豆包里语音聊天（低门槛），产出逐字稿/访谈纪要后回流到本 skill 整理。用户问"怎么让爸妈用"或"怎么接入豆包"时，引导看 README.md 的「用法 B」。
+**双端架构说明**：本 skill 是"加工端"（整理、台账、成书），与平台无关（WorkBuddy/Claude/GPT 等任何能读文件的 Agent 均可承载）。包内 assets/doubao-collector.md 是配套的采集端提示词（内含人生全景题库）——粘贴进豆包/MiniMax 等任意带实时语音的多模态产品，即可让 AI 直接语音采访长辈，产出逐字稿/访谈纪要后回流到本 skill 整理。用户问"怎么让爸妈用"或"怎么接入豆包"时，引导看 README.md 的「用法 B」。
 
 ## 链路总览（循环；每一步 AI 都介入）
 
@@ -91,7 +91,7 @@ python3 scripts/oh_cli.py questions <工作目录> <book_id>
 ```
 
 - 首次依据人物档案生成；之后每次整理完文稿会**自动刷新**（依据：历史文稿主题覆盖 + 待确认事实点）。
-- 方法论见 [references/question-methodology.md](references/question-methodology.md)：人生阶段骨架、具体锚点问法、家族溯源七问、温柔核实。若用户对清单不满意，按该文件手工调整或补充后再给用户。
+- 方法论见 [references/question-methodology.md](references/question-methodology.md)：人生全景题库（七大地带）、具体锚点问法、双模式追问、温柔核实。**清单必须覆盖七大地带再按人物档案具体化**，不能只围绕家人提供的两三个片段出题——清单太薄会导致采访中途没题可问。若用户对清单不满意，按该文件手工调整或补充后再给用户。
 
 ## 第 3 步：线下采访（AI 不参与）
 
