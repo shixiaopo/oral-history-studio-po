@@ -1,6 +1,6 @@
 ---
 name: oral-history-studio
-version: 2.5.2
+version: 2.6.0
 display_name: 人生之书·口述历史工作室
 display_name_en: Life Book · Oral History Studio
 description: 口述历史工作室——为家人记录人生故事的完整链路 Skill。用户要做家人/长辈的口述历史采访或代访（"人生之书"类需求）时使用：AI
@@ -18,6 +18,19 @@ disable-model-invocation: false
 ---
 
 # 口述历史工作室（oral-history-studio）
+
+## 〇、环境路由（最先做这一步，再决定怎么用本文件）
+
+**先判断你（执行本 skill 的 AI）当前所处的环境，按表行动：**
+
+| 你所在的环境 | 特征 | 你该做什么 |
+|---|---|---|
+| **语音对话产品**（豆包/MiniMax 等带实时语音通话的 App） | 你以语音对话为主要交互；本 skill 是被整包上传或粘贴进来的 | **进入纯采集模式**：忽略本文件其余全部章节（链路图、模型配置、oh_cli.py、转写等一律不提、不做、不解释），直接读取 [assets/doubao-collector.md](assets/doubao-collector.md) 并严格按它执行——那是你在本环境下的完整行为定义。**绝不主动谈论音频大小、录音文件、转写模型**等加工端概念，长辈和用户都不需要知道这些 |
+| **Agent / 开发环境**（WorkBuddy/Claude/GPT、命令行等能读写文件、跑脚本的地方） | 你能读写本地文件、执行命令 | 按本文件后续章节执行完整工作流（加工端）；需要采集端提示词时取 assets/doubao-collector.md |
+
+判断不了的（如纯文本对话里用户粘贴了本 skill）：问一句「您是想让我直接语音采访长辈，还是帮您整理采访素材、成书？」按回答路由。
+
+---
 
 帮用户记录家人的人生故事。核心理念：**长辈的人生故事必须由长辈亲口讲出**。两种工作形态：
 

@@ -2,11 +2,20 @@
 
 > 把爸妈、爷爷奶奶的一生，一点点聊成一本可以传给后代的书。
 
-![license](https://img.shields.io/badge/license-MIT-green) ![version](https://img.shields.io/badge/version-2.3.0-blue)
+![license](https://img.shields.io/badge/license-MIT-green) ![version](https://img.shields.io/badge/version-2.5.2-blue)
 
 **人生之书**是一套完整的口述历史工作流：AI 帮你出采访问题清单当抓手 → 长辈用豆包语音聊天或你当面录音 → AI 把口语转写稿整理成第一人称人生文稿 → 自动核对前后矛盾 → 攒够了一键合订成书。
 
 已在真实 2.5 小时采访录音上验证全链路。
+
+## 先选路，再下载（30 秒决策）
+
+是的——**README 的作用就是让你在这里完成决策**，想清楚要哪条路，只拿需要的文件：
+
+- **只想让 AI 替你采访长辈**（你在不在长辈身边都行）→ 你只需要一个文件：下载 [`assets/doubao-collector.md`](assets/doubao-collector.md)，粘贴进豆包/MiniMax 对话就能用。不用装任何东西，仓库其他文件都可以不碰。
+- **想自己采访长辈、让 AI 当秘书**（出清单/整理文稿/核对事实/成书）→ 你需要装本 skill：把整个仓库/zip 装进 WorkBuddy、Claude、GPT 等 Agent 平台。
+
+两条路可以都走：平时用豆包让长辈随时聊（B），素材攒够后在 Agent 里整理成书（A）。选错了也没关系——文件都是同一套，随时补装。
 
 ---
 
