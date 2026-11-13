@@ -37,6 +37,16 @@
 
 **只有当你决定「亲自采访长辈、让 AI 做幕后」时，才需要装 skill**——在 WorkBuddy / Claude / GPT / MiniMax Agent 这些平台上创建一个能调用本 skill 的智能体（各平台装法不同，共同点是都能让 AI 读到文件）。装好后的定位：**AI 是你的秘书**，它出问题清单、整理文稿、核对事实、成书；采访现场的提问和追问由你本人掌握。
 
+### 最懒的装法：让 Agent 自己来 GitHub 拿
+
+不想手动下载、创建智能体？**直接把你面前这个 Agent 当跑腿的**——对 WorkBuddy / Claude Code / Cursor 等能联网、能读文件的 Agent 说：
+
+> 「帮我从 GitHub 克隆 https://github.com/shixiaopo/oral-history-studio-po 这个口述历史 skill，读一下它的 SKILL.md，然后我要给我爸做一本人生之书」
+
+Agent 会自己 clone 仓库、读懂 SKILL.md、按里面的工作流开工。README 你都不用看——SKILL.md 的「环境路由」会让它自动进入加工端模式。
+
+> 兼容性说明：本 skill 的核心（SKILL.md + 两个 references 方法论）是纯提示词资产，任何能读文件的 AI 都能直接执行；`scripts/oh_cli.py` 是可选的持久化工具，没有它流程照样能跑（AI 直接按方法论出清单、整理文稿即可）。
+
 ### WorkBuddy（推荐，一键装）
 
 WorkBuddy 对话里说：
@@ -50,7 +60,7 @@ WorkBuddy 对话里说：
 1. 把本仓库内容（至少 `SKILL.md` + `references/` 两个文件）放进你的 Agent 上下文：
    - Claude Projects：把 `SKILL.md`、`references/question-methodology.md`、`references/manuscript-prompt.md` 上传为项目知识
    - GPTs：把同样内容贴进 Instructions 或知识文件
-   - 命令行 Agent（Claude Code 等）：直接 clone 本仓库，让 Agent 读 SKILL.md 照做
+   - 命令行 Agent（Claude Code 等）：`git clone https://github.com/shixiaopo/oral-history-studio-po` 然后让 Agent 读 SKILL.md 照做
 2. 对 AI 说：「我要给我爸做一本人生之书」——后续流程完全一致
 
 ### 核心循环
