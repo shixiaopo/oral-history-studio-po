@@ -91,7 +91,7 @@ python3 scripts/oh_cli.py questions <工作目录> <book_id>
 ```
 
 - 首次依据人物档案生成；之后每次整理完文稿会**自动刷新**（依据：历史文稿主题覆盖 + 待确认事实点）。
-- 方法论见 [references/question-methodology.md](references/question-methodology.md)：人生全景题库（七大地带）、具体锚点问法、双模式追问、温柔核实。**清单必须覆盖七大地带再按人物档案具体化**，不能只围绕家人提供的两三个片段出题——清单太薄会导致采访中途没题可问。若用户对清单不满意，按该文件手工调整或补充后再给用户。
+- 方法论见 [references/question-methodology.md](references/question-methodology.md)：人生全景题库（八大地带 46 题，完整题目在 assets/doubao-collector.md 第二节）、具体锚点问法、双模式追问、温柔核实。**清单必须覆盖八大地带再按人物档案具体化**，不能只围绕家人提供的两三个片段出题——清单太薄会导致采访中途没题可问。若用户对清单不满意，按该文件手工调整或补充后再给用户。
 
 ## 第 3 步：线下采访（AI 不参与）
 
